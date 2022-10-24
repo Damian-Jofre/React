@@ -1,9 +1,9 @@
 import React from "react"
 
-const Saludo = (props) => {
+const ItemListContainer = (props) => {
     return (
-        <p>{props.text}</p>
+        <p>{props.greeting}</p>
     )
 }
 
-export default Saludo
+export default ItemListContainer

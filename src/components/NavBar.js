@@ -1,12 +1,12 @@
 import React from "react";
-import Logo from "./CartWidget";
-import Saludo from "./ItemListContainer";
+import CartWidget from "./CartWidget";
+import ItemListContainer from "./ItemListContainer";
 
 const NavBar = () => {
     return (
         <nav className="navegador">
             <div className="iconoMarca">
-                <Saludo text="Pink Urban" />
+                <p>Pink Urban</p>
             </div>
             <div className="divUl">
                 <ul className="navUl">
@@ -21,7 +21,7 @@ const NavBar = () => {
                     </li>
                 </ul>
                 <div className="logo">
-                <Logo />
+                <CartWidget />
                 </div>
             </div>
         </nav>

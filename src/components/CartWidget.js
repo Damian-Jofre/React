@@ -1,6 +1,6 @@
 import React from "react";
 
-const Logo = () => {
+const CartWidget = () => {
     return (
         <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-cart" viewBox="0 0 16 16">
@@ -11,4 +11,4 @@ const Logo = () => {
 }
 
 
-export default Logo 
+export default CartWidget

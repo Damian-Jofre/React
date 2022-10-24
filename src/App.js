@@ -1,13 +1,13 @@
 import './App.css';
 import NavBar from './components/NavBar';
-import Saludo from './components/ItemListContainer';
+import ItemListContainer from './components/ItemListContainer';
 
 function Nav() {
   return (
     <>
     <nav>
       <NavBar/>
-      <Saludo text="otra prueba"/> 
+      <ItemListContainer greeting="Bienvenido a Pink Urban"/> 
     </nav>
     </>
   );
