@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +40,46 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.navegador{
+  background-color: pink;
+  padding: .5rem;
+  display: flex;
+}
+
+.iconoMarca{
+  width: 8rem;
+  text-align: center;
+
+}
+
+.navUl{
+  display: flex;
+}
+
+.divUl{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.navUl li{
+  list-style: none;
+  margin-right: 2rem;
+}
+
+.navUl li a{
+  text-decoration: none;
+  color: black;
+}
+
+.navUl li a:hover{
+  color: white;
+}
+
+.logo{
+  margin-right: .5rem;
+  margin-left: .5rem;
 }
