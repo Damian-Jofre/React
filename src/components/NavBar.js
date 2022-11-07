@@ -6,18 +6,18 @@ const NavBar = () => {
     return (
         <nav className="navegador">
             <div className="iconoMarca">
-                <p>Pink Urban</p>
+                <a href="/">Pink Urban Link</a>
             </div>
             <div className="divUl">
                 <ul className="navUl">
                     <li>
-                        <a href="#">Zapatos</a>
+                        <a href="/zapatos">Zapatos</a>
                     </li>
                     <li>
-                        <a href="#">Zapatillas</a>
+                        <a href="/zapatillas">Zapatillas</a>
                     </li>
                     <li>
-                        <a href="#">Contacto</a>
+                        <a href="/contacto">Contacto</a>
                     </li>
                 </ul>
                 <div className="logo">
