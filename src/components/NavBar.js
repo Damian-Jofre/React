@@ -1,23 +1,25 @@
 import React from "react";
 import CartWidget from "./CartWidget";
-import ItemListContainer from "./ItemListContainer";
+import { NavLink as Link } from "react-router-dom"
 
 const NavBar = () => {
     return (
         <nav className="navegador">
-            <div className="iconoMarca">
-                <a href="/">Pink Urban Link</a>
-            </div>
             <div className="divUl">
                 <ul className="navUl">
-                    <li>
-                        <a href="/zapatos">Zapatos</a>
+                    <li className="iconoMarca">
+                        <Link to='/' activeClassName="active">Pink Urban</Link>
                     </li>
                     <li>
-                        <a href="/zapatillas">Zapatillas</a>
+                        <Link to='/category/:contacto' activeClassName="active">Contacto</Link>
                     </li>
                     <li>
-                        <a href="/contacto">Contacto</a>
+                        <Link to="/category/dashboard" activeClassName="active">Productos</Link>
+                    </li>
+                    <li>
+                        <Link to="/category/object_route" activeClassName="active">
+                        Route as Object
+                        </Link>
                     </li>
                 </ul>
                 <div className="logo">

@@ -2,10 +2,12 @@ import './App.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import { Routes, Route } from 'react-router-dom';
+import Dashboard from './components/Dashboard';
+import RouteAsObj from './components/RouteAsObj';
 import Contacto from './paginas/Contacto';
-import Zapatos from './paginas/Zapatos';
-import Zapatillas from './paginas/Zapatillas';
-import { Route, Routes } from 'react-router-dom';
+
+
 
 
 function Nav() {
@@ -14,18 +16,16 @@ function Nav() {
     <nav>
       <NavBar/>
     </nav>
-    <body>
-        <main>
-          <Routes>
-            <Route exact path="/" element={<ItemListContainer  greeting="Bienvenido a Pink Urban" />} /> 
-            <Route exact path='item' element= {<ItemDetailContainer />} />
-            <Route exact path='/category' element= {<ItemListContainer />} />
-            <Route exact path='/contacto' element={<Contacto />} />
-            <Route exact path='/zapatos' element={<Zapatos />} />
-            <Route exact path='/zapatillas' element={<Zapatillas />} />
-          </Routes>
-        </main>
-    </body>
+        <div>
+        <Routes>
+          <Route exact path="/" element={<ItemListContainer  greeting="Bienvenido a Pink Urban" />} /> 
+          <Route exact path='/category' element= {<ItemListContainer />} />
+          <Route exact path='category/:contacto' element={<Contacto />} />
+          <Route exact path="category/dashboard/*" element={<Dashboard />}></Route>
+          <Route exact path="/category/object_route/*" element={<RouteAsObj />}></Route> 
+          <Route exact path="item/*" element={<ItemDetailContainer />}></Route>
+        </Routes>
+      </div>
     </>
   );
 }

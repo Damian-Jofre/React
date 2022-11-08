@@ -23,12 +23,13 @@
 
 .iconoMarca{
   width: 8rem;
-  text-align: center;
-
+  list-style: none;
 }
 
 .navUl{
+  width: 100%;
   display: flex;
+  border: solid 1px red;
 }
 
 .divUl{
@@ -55,6 +56,10 @@
 .logo{
   margin-right: .5rem;
   margin-left: .5rem;
+}
+
+nav a.active {
+  color: #eee;
 }
 
 /* Contador */
@@ -136,3 +141,25 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+/* Link Productos */
+
+.linkProd {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.linkProd li {
+  text-decoration: none;
+}
+
+.ordenarProd {
+  display: flex;
+  justify-content: space-around;
+}
+
+h2 {
+  margin: 5rem;
+  text-align: center;
+}
