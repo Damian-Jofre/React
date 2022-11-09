@@ -1,11 +1,9 @@
 import './App.css';
 import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer';
+import ItemListContainer from './paginas/ItemListContainer';
+import ItemDetailContainer from './paginas/ItemDetailContainer';
 import { Routes, Route } from 'react-router-dom';
-import Dashboard from './components/Dashboard';
-import RouteAsObj from './components/RouteAsObj';
-import Contacto from './paginas/Contacto';
+
 
 
 
@@ -17,17 +15,21 @@ function Nav() {
       <NavBar/>
     </nav>
         <div>
-        <Routes>
-          <Route exact path="/" element={<ItemListContainer  greeting="Bienvenido a Pink Urban" />} /> 
-          <Route exact path='/category' element= {<ItemListContainer />} />
-          <Route exact path='category/:contacto' element={<Contacto />} />
-          <Route exact path="category/dashboard/*" element={<Dashboard />}></Route>
-          <Route exact path="/category/object_route/*" element={<RouteAsObj />}></Route> 
-          <Route exact path="item/*" element={<ItemDetailContainer />}></Route>
-        </Routes>
+          <Routes>
+            // home
+            <Route exact path="/*" element={<ItemListContainer  greeting="Bienvenido a Pink Urban" />} /> 
+            // filtro por categorías con idCategory definido en useParams
+            {/* <Route exact path='/category/:idCategory' element= {<ItemListContainer />} />
+            // contacto
+            <Route exact path='/contacto' element={<Contacto />} /> */}
+            //// filtro al detalle del producto con idProduct definido en useParams
+            <Route exact path="item/:idProduct" element={<ItemDetailContainer />}/>
+          </Routes>
       </div>
     </>
   );
 }
 
 export default Nav;
+
+

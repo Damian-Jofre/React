@@ -1,4 +1,3 @@
-import React from "react";
 import CartWidget from "./CartWidget";
 import { NavLink as Link } from "react-router-dom"
 
@@ -12,14 +11,6 @@ const NavBar = () => {
                     </li>
                     <li>
                         <Link to='/category/:contacto' activeClassName="active">Contacto</Link>
-                    </li>
-                    <li>
-                        <Link to="/category/dashboard" activeClassName="active">Productos</Link>
-                    </li>
-                    <li>
-                        <Link to="/category/object_route" activeClassName="active">
-                        Route as Object
-                        </Link>
                     </li>
                 </ul>
                 <div className="logo">
