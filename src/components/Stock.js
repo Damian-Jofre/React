@@ -22,5 +22,12 @@ const Stock = [
     },
   ]
 
+  const GetStock = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() =>{
+            resolve(Stock);           
+            }, 1000);
+    })
+}
 
-  export default Stock
+  export default GetStock

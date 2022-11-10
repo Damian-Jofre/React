@@ -1,25 +1,22 @@
-import { useNavigate } from "react-router-dom";
 import './style.css';
 
 const ItemDetail = ({ item }) => {
-    const { id, name, imgeUrl} = item
-    const navigate = useNavigate();
 
-    const verDetalle = () => {
-        navigate(`/item/${id}`, { state: item })
-    }
+    const { id, name, imgeUrl, price, description} = item
 
     return (
-        <div className="listProductos">
-            <p>Para mas detalle click sobre la imagen</p>
-            <div onClick={verDetalle}>
-                <div key={id} className="productos">
+        <div className="listProductos2">
+            <p>Estos son los detalles</p>
+            <div>
+                <div key={id} className="productos2">
                     <h3>{name}</h3>  
-                    <img className='product-image' src={imgeUrl} alt={name}></img> 
+                    <img className='product-image2' src={imgeUrl} alt={name}></img> 
+                    <p>Precio: {price}</p>
+                    <p>Descripción: {description}</p>
                 </div>   
             </div>
         </div>
-    ); 
-}
+    );  
+} 
 
 export default ItemDetail

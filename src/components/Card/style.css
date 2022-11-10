@@ -1,17 +1,23 @@
-.listProductos2 {
+.listProductos {
     display: flex;
     flex-direction: column;
     text-align: center;
   }
   
-  .productos2 {
+  .productos {
     margin: 1rem;
     text-align: center;
   }
   
-  .productos2 img {
+  .productos img {
     width: 200px;
     border-radius: .3rem;
+    cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 200ms ease;
   }
   
+  .productos img:hover {
+    border: solid 1px purple;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }

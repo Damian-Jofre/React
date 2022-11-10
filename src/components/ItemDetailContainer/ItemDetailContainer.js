@@ -4,19 +4,17 @@ import ItemCount from "../ItemCount/itemCount";
 import './style.css';
 
 const ItemDetailContainer = () => {  
-    const { state } = useLocation();
-    const { description} = state
-
+    const { state } = useLocation(); 
+ 
     return (
         <>
         <div className="detalles">
             <p>Detalles</p>
             <ItemDetail item={state} /> 
-            {description}
-            <ItemCount />
+            <ItemCount item={state}/>
         </div>
         </>
-    )
+    ) 
 }
 
 export default ItemDetailContainer
