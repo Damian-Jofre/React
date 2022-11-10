@@ -1,5 +1,6 @@
-import CartWidget from "./CartWidget";
+import CartWidget from "../CartWidget";
 import { NavLink as Link } from "react-router-dom"
+import './style.css';
 
 const NavBar = () => {
     return (
@@ -10,7 +11,7 @@ const NavBar = () => {
                         <Link to='/' activeClassName="active">Pink Urban</Link>
                     </li>
                     <li>
-                        <Link to='/category/:contacto' activeClassName="active">Contacto</Link>
+                        <Link to='/category/contacto' activeClassName="active">Contacto</Link>
                     </li>
                 </ul>
                 <div className="logo">

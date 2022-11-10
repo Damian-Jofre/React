@@ -1,0 +1,17 @@
+.inicio {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 1rem;
+  }
+  
+  .inicio h1 {
+    margin: 5rem;
+  }
+  
+.ordenarProd {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
