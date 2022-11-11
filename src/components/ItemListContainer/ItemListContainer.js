@@ -7,8 +7,6 @@ const ItemListContainer = ( { greeting } ) => {
     const [products, setProductos] = useState([]);
     const [loading, setLoading] = useState(false);
 
-//nuevo
-
     useEffect(() => {
         setLoading(true);
         GetStock()
@@ -16,9 +14,6 @@ const ItemListContainer = ( { greeting } ) => {
             .catch((err) => console.error(err))
             .finally(() => setLoading(false)) 
         }, [])
-
-
-//hasta aca
 
     return (
         <div className="inicio">
