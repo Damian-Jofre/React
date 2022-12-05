@@ -1,0 +1,16 @@
+.categorias {
+    display: flex;
+}
+
+.btnCat {
+    background-color: palevioletred;
+    border-color: pink;
+    border-radius: .5rem;
+    padding: .2rem;
+    cursor: pointer;
+    margin: 1rem 5rem;
+}
+
+.btnCat:hover {
+    color: white;
+}

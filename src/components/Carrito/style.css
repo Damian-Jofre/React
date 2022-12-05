@@ -1,0 +1,26 @@
+.inicioCarrito {
+    position: fixed; 
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 100vh;
+    background-color: pink;
+    border: solid 2px red;
+    padding: 1rem;
+    z-index: 1; 
+    transition: all 0.5s ease-in-out;
+}
+
+.cierroCart {
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 1px red;
+}
+
+.btnCart {
+    margin-bottom: 0.5rem;
+    background-color: coral;
+    padding: 0.3rem;
+    width: fit-content;
+}

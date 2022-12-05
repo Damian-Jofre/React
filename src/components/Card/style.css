@@ -11,6 +11,7 @@
   
   .productos img {
     width: 200px;
+    height: 250px;
     border-radius: .3rem;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);

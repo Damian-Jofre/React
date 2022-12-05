@@ -1,32 +1,20 @@
-import { useState } from "react";
 import './style.css';
 
-
-const ItemCount = ({ item }) => {
-    const [contador, setContador] = useState (0)
-
-    const click = () => {
-        setContador(contador + 1)
-    }
-
-    const click2 = () => {
-        setContador(contador - 1)
-    }
-
-    const agregarCart = () => {
-        const sumaProd = (item.price * contador)
-        console.log(sumaProd)
-    }
+const ItemCount = ({ id, sumaProd, restaProd, numItems, stock }) => {
 
     return(
         <>
         <div className="contador">
             <div className="botonesCarrito">
-                <button className="btnCont" onClick={click2}>-</button>
-                <p>{contador}</p>
-                <button className="btnCont" onClick={click}>+</button>               
+                <button disabled={numItems == 0} className="btnCont" onClick={() => restaProd(id)}>-</button> 
+                <input 
+                    disabled
+                    className="inputCart"
+                    type="text"
+                    value={numItems}
+                />
+                <button disabled={numItems == stock} className="btnCont" onClick={() => sumaProd(id)}>+</button>
             </div>
-            <button className="btnCart" onClick={agregarCart}>Agregar al carrito</button>
         </div>
         </>
     )

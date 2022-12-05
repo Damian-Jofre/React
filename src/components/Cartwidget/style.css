@@ -1,0 +1,21 @@
+.carrito{
+    padding: 0.5rem;
+    display: flex;
+    box-shadow: 0 2px 4px 0 blueviolet;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.numeroCarrito{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: brown;  */
+    border-radius: 50%;
+    position: absolute;
+    top: 1.2rem; 
+    right: 1.75rem;
+    color: red;
+}

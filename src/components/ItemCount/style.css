@@ -23,10 +23,22 @@
     border: var(--bg-secondary);
     font-size: 20px;
     font-weight: bold;
+    cursor: pointer;
   } 
   
   .btnCont:hover {
     color: white
+  }
+
+  .btnCont:disabled {
+    cursor: not-allowed;
+    color: red;
+  }
+
+  .inputCart {
+    text-align: center;
+    width: 3rem;
+    background-color: pink;
   }
   
   .btnCart {

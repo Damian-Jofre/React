@@ -1,34 +1,22 @@
-import { useEffect, useState } from "react";
-import GetStock from "../Stock"
-import Card from "../Card/Card";
+import CategoriasDetail from '../Categorias/Categorias';
 import './style.css';
 
-const ItemListContainer = ( { greeting } ) => {
-    const [products, setProductos] = useState([]);
-    const [loading, setLoading] = useState(false);
-
-//nuevo
-
-    useEffect(() => {
-        setLoading(true);
-        GetStock()
-            .then((response) => setProductos(response))
-            .catch((err) => console.error(err))
-            .finally(() => setLoading(false)) 
-        }, [])
-
-
-//hasta aca
+const ItemListContainer = ( { greeting, renderProducts, onFilter, allCategory } ) => {
 
     return (
-        <div className="inicio">
-            <h1>{ greeting }</h1>
-            <div className="ordenarProd" >
-                {loading ? <h2>Cargando..</h2> : products.map(p => (
-                    <Card key={p.id} item={p} /> 
-                ))} 
-            </div> 
-        </div> 
+    <>
+    <h1 className="bienvenido">{ greeting }</h1>
+    <div className="inicio">
+        <div className="ordenarCat">
+            {allCategory && allCategory.map((category) => (
+                <CategoriasDetail key={ category.id } { ... category } item={category} onFilter={onFilter} />
+            ))}
+        </div>
+        <div className="ordenarProd" >
+        { renderProducts } 
+        </div>  
+    </div>  
+    </>
     ); 
 }
 

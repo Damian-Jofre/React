@@ -1,0 +1,22 @@
+.car {
+   display: flex; 
+   align-items: center;
+}
+
+.contenidoCar {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.btnBorrar {
+    padding: 0.4rem;
+    margin: 2rem;
+    border: none;
+    background-color: palevioletred;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+}
+
+.btnBorrar:hover {
+    color: white;
+}

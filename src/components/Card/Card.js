@@ -1,24 +1,26 @@
 import { useNavigate } from "react-router-dom";
+import ItemCount from "../ItemCount/itemCount";
 import './style.css';
 
-const Card = ({ item }) => {
-
-    const { id, name, imgeUrl} = item
+const Card = ({ item, sumaProd, restaProd, numItems }) => {
+    const { id, img, nombre, stock } = item;
     const navigate = useNavigate();
 
     const verDetalle = () => {
-        navigate(`/item/${id}`, { state: item })
-    }
+        navigate(`/item/${id}`, { state: item } )
+    } 
 
     return (
         <div className="listProductos">
-            <p>Card - Para mas detalle click sobre la imagen</p>
             <div onClick={verDetalle}>
                 <div key={id} className="productos">
-                    <h3>{name}</h3>  
-                    <img className='product-image' src={imgeUrl} alt={name}></img> 
+                    <h3>{nombre}</h3>  
+                    <img className='product-image' src={img} alt={nombre}></img> 
                 </div>   
             </div>
+            <div>
+                <ItemCount restaProd={restaProd} sumaProd={sumaProd} numItems={numItems} id={id} stock={stock} /> 
+            </div> 
         </div>
     );  
 }
